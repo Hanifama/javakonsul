@@ -2,418 +2,689 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="styles.css" />
-  <title>PT Java Konsul Utama | Home</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beranda | PT. Java Konsul Utama</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </head>
 
 <body>
-  <nav>
-    <div class="nav__header">
-      <div class="nav__logo">
-        <a href="#"><img src="assets/logo.jpg" alt="Logo">
-          <span>Java Konsul</span>
-        </a>
-      </div>
-      <div class="nav__menu__btn" id="menu-btn">
-        <i class="ri-menu-3-line"></i>
-      </div>
-    </div>
-    <ul class="nav__links" id="nav-links">
-      <li><a href="#">Beranda</a></li>
-      <li><a href="#">Tentang Kami</a></li>
-      <li><a href="#">Layanan Kami</a></li>
-      <li><a href="#">Portfolio Kami</a></li>
-      <li><a href="#">Artikel</a></li>
-      <li><a href="#">Hubungi Kami</a></li>
-    </ul>
-  </nav>
 
-  <header class="section__container header__container" id="home">
-    <div class="header__content">
-      <h1><span>Membangun</span> Masa Depan dengan Tenaga Keahlian Profesional</h1>
-      <p class="section__description">
-        PT. Java Konsul Utama hadir sebagai mitra terpercaya dalam bidang Survey, Pengukuran, Perencanaan, dan Manajemen
-        Konstruksi. Dengan tim profesional dan teknologi terbaru, kami memastikan setiap proyek berjalan presisi,
-        efisien, dan sesuai standar terbaik.
-      </p>
-      <form action="/">
-        <div class="input__group">
-          <label for="location">Lokasi</label>
-          <input type="text" name="location" placeholder="Bandung, Indonesia" />
-        </div>
-        <div class="input__group">
-          <label for="date">Proyek</label>
-          <input type="text" name="date" placeholder="Perencanaan" />
-        </div>
-        <div class="input__group">
-          <label for="price">Kerja Sama?</label>
-          <input type="text" name="price" placeholder="Hubungi Kami" />
-        </div>
-        <button class="btn"><i class="ri-building-line"></i></button>
-      </form>
-    </div>
-    <div class="header__image">
-      <img src="assets/head.jpg" alt="header" />
-      <img src="assets/head-2.jpg" alt="header" />
-      <img src="assets/head-3.jpg" alt="header" />
-      <img src="assets/bg.png" alt="bg" />
-    </div>
-  </header>
+    <nav
+        class="fixed top-0 left-0 w-full z-50 bg-white shadow-md md:relative md:shadow-none md:max-w-[var(--max-width)] md:mx-auto md:flex md:items-center md:justify-between md:p-4">
+        <!-- Logo & Toggle Button -->
+        <div class="w-full flex items-center justify-between p-4 md:w-1/4 md:p-0">
+            <!-- Logo -->
+            <img src="assets/logo.png" alt="Logo" class="h-10 md:h-14 w-auto">
 
-  <section class="section__container choose__container" id="about">
-    <div class="choose__image">
-      <img src="assets/choose.jpg" alt="Pilih Kami" />
-    </div>
-    <div class="choose__content">
-      <p class="section__subheader">Kenapa Memilih Kami?</p>
-      <h2 class="section__header">Rencanakan Konstruksi Anda <span>Bersama Kami</span></h2>
-      <ul class="choose__list">
-        <li>
-          <span><i class="ri-hand-heart-fill"></i></span>
-          <div>
-            <h4>Komitmen pada Kepuasan Klien</h4>
-            <p>
-              Kami bekerja dengan transparansi, profesionalisme, dan komunikasi yang jelas agar setiap proyek berjalan
-              sesuai harapan klien.
-            </p>
-          </div>
-        </li>
-        <li>
-          <span><i class="ri-award-fill"></i></span>
-          <div>
-            <h4>Keahlian & Pengalaman Teruji</h4>
-            <p>
-              Dengan pengalaman bertahun-tahun di bidang Survey, Pengukuran, Perencanaan, dan Manajemen Konstruksi, kami
-              telah menangani berbagai proyek berskala nasional dengan hasil yang presisi dan berkualitas.
-            </p>
-          </div>
-        </li>
-        <li>
-          <span><i class="ri-price-tag-3-fill"></i></span>
-          <div>
-            <h4>Jaminan Harga Terbaik</h4>
-            <p>
-              Dari perencanaan hingga pengawasan konstruksi, kami menyediakan solusi menyeluruh yang memastikan proyek
-              berjalan lancar, tepat waktu, dan sesuai standar.
-            </p>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </section>
-
-
-  <section class="section__container popular__container" id="package">
-    <img src="assets/bg.png" alt="bg" class="popular__bg" />
-    <p class="section__subheader">Layanan Kami</p>
-    <h2 class="section__header">Kami Hadir untuk <span>Proyek</span> Konstruksi Anda</h2>
-    <!-- Slider main container -->
-    <div class="swiper">
-      <!-- Additional required wrapper -->
-      <div class="swiper-wrapper">
-        <!-- Slides -->
-        <div class="swiper-slide">
-          <div class="popular__card">
-            <img src="assets/port-1.jpg" alt="popular" />
-            <div class="popular__content">
-              <div class="popular__rating">
-                <span><i class="ri-star-fill"></i></span>
-                4.0(34) 😊
-              </div>
-              <h4>Survey & Pengukuran </h4>
-              <p>Pengukuran akurat dengan memastikan presisi dalam setiap proyek.</p>
-              <div class="popular__card__footer">
-                <!-- <div>
-                  <span><i class="ri-time-line"></i></span> 4 Hari
-                </div> -->
-                <div>
-                  <span><i class="ri-group-3-fill"></i></span> 150+
-                </div>
-                <div>
-                  <span><i class="ri-map-pin-2-fill"></i></span> Indonesia
-                </div>
-              </div>
+            <!-- Teks Perusahaan -->
+            <div class="leading-tight">
+                <span class="block text-lg md:text-xl font-bold text-blue-900">
+                    PT. JAVA KONSUL UTAMA
+                </span>
+                <span class="text-[0.5rem] font-semibold text-red-500">
+                    Civil Engineering · Planning · Soil Investigation · General Consultant
+                </span>
             </div>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="popular__card">
-            <img src="assets/port-2.jpg" alt="popular" />
-            <div class="popular__content">
-              <div class="popular__rating">
-                <span><i class="ri-star-fill"></i></span>
-                4.5(55) 😘
-              </div>
-              <h4>Penyelidikan & Studi Kelayakan</h4>
-              <p>Analisis mendalam untuk menilai kelayakan proyek sebelum tahap konstruksi dimulai.</p>
-              <div class="popular__card__footer">
-                <!-- <div>
-                  <span><i class="ri-time-line"></i></span> 3 Hari
-                </div> -->
-                <div>
-                  <span><i class="ri-group-3-fill"></i></span> 100+
-                </div>
-                <div>
-                  <span><i class="ri-map-pin-2-fill"></i></span> Indonesia
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="popular__card">
-            <img src="assets/port-3.jpg" alt="popular" />
-            <div class="popular__content">
-              <div class="popular__rating">
-                <span><i class="ri-star-fill"></i></span>
-                4.2(45) 😊
-              </div>
-              <h4>Perencanaan & Perancangan</h4>
-              <p>Perencanaan detail dengan perhitungan teknis yang matang untuk memastikan keberhasilan proyek.</p>
-              <div class="popular__card__footer">
-                <!-- <div>
-                  <span><i class="ri-time-line"></i></span> 2 Hari
-                </div> -->
-                <div>
-                  <span><i class="ri-group-3-fill"></i></span> 200+
-                </div>
-                <div>
-                  <span><i class="ri-map-pin-2-fill"></i></span> Indonesia
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="popular__card">
-            <img src="assets/popular-4.jpg" alt="popular" />
-            <div class="popular__content">
-              <div class="popular__rating">
-                <span><i class="ri-star-fill"></i></span>
-                4.8(25) 😘
-              </div>
-              <h4>Labuan Bajo</h4>
-              <p><span>Rp 6.000.000,-</span> Per Orang</p>
-              <div class="popular__card__footer">
-                <div>
-                  <span><i class="ri-time-line"></i></span> 5 Hari
-                </div>
-                <div>
-                  <span><i class="ri-group-3-fill"></i></span> 10+
-                </div>
-                <div>
-                  <span><i class="ri-map-pin-2-fill"></i></span> Indonesia
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="popular__card">
-            <img src="assets/popular-5.jpg" alt="popular" />
-            <div class="popular__content">
-              <div class="popular__rating">
-                <span><i class="ri-star-fill"></i></span>
-                4.0(15) 😊
-              </div>
-              <h4>Bromo</h4>
-              <p><span>Rp 3.000.000,-</span> Per Orang</p>
-              <div class="popular__card__footer">
-                <div>
-                  <span><i class="ri-time-line"></i></span> 3 Hari
-                </div>
-                <div>
-                  <span><i class="ri-group-3-fill"></i></span> 20+
-                </div>
-                <div>
-                  <span><i class="ri-map-pin-2-fill"></i></span> Indonesia
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <section class="section__container explore__container">
-    <div class="explore__image">
-      <img src="assets/explore.jpg" alt="explore" />
-    </div>
-    <div class="explore__content">
-      <p class="section__subheader">Jelajahi Bersama Kami</p>
-      <h2 class="section__header">
-        Dapatkan Wawasan Lebih Tentang <span>Layanan Kami</span>
-      </h2>
-      <p class="section__description">
-        Dari survey dan pengukuran hingga manajemen konstruksi, jelajahi bagaimana kami membantu proyek Anda berjalan
-        lebih efisien dan presisi. Temukan berbagai proyek yang telah kami tangani dan bagaimana kami menghadirkan
-        solusi
-        terbaik di setiap tahap konstruksi.
-      </p>
-      <div class="explore__btn">
-        <button class="btn">Tentang Kami</button>
-      </div>
-      <div class="explore__grid">
-        <div>
-          <h4>?</h4>
-          <p>Tahun<br />Pengalaman</p>
+            <!-- Hamburger Menu -->
+            <button id="menu-btn" class="text-2xl md:hidden transition-transform transform">
+                <span id="menu-icon">&#9776;</span> <!-- Ikon burger -->
+            </button>
         </div>
-        <div>
-          <h4>?</h4>
-          <p>Layanan<br />Tersedia</p>
-        </div>
-        <div>
-          <h4>?</h4>
-          <p>Pelanggan<br />Bahagia</p>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <section class="section__container client__container">
-    <img src="assets/bg.png" alt="bg" class="client__bg" />
-    <p class="section__subheader">Apa Kata Klien Kami?</p>
-    <h2 class="section__header">Testimoni <span>Klien</span></h2>
-    <div class="client__card active">
-      <img src="assets/client-1.jpg" alt="client" />
-      <div class="client__content">
-        <h4>Desi Permatasari</h4>
-        <h5>Project Manager PT. XYZ</h5>
-        <p>
-          "Tim PT. Java Konsul Utama sangat profesional! Mereka memastikan setiap tahapan proyek berjalan sesuai rencana
-          dengan pengawasan yang ketat. Hasil pekerjaan mereka berkualitas tinggi dan selalu tepat waktu. Kami sangat
-          puas!"
-        </p>
-      </div>
-    </div>
-    <div class="client__card">
-      <img src="assets/client-2.jpg" alt="client" />
-      <div class="client__content">
-        <h4>Dian Permadi</h4>
-        <h5>Kepala Teknik CV. ABCD</h5>
-        <p>
-          "Kami sangat terbantu dengan hasil survey dan pemetaan yang presisi. Data yang diberikan sangat detail dan
-          akurat, membantu kami dalam pengambilan keputusan teknis. Terima kasih atas dedikasi dan profesionalisme tim!"
-        </p>
-      </div>
-    </div>
-    <div class="client__card">
-      <img src="assets/client-3.jpg" alt="client" />
-      <div class="client__content">
-        <h4>Rina Kusuma</h4>
-        <h5>Kepala Desa</h5>
-        <p>
-          "Dokumen perencanaan dan perancangan dari PT. Java Konsul Utama sangat matang dan terstruktur. Hal ini membuat
-          proses pembangunan berjalan lancar tanpa kendala berarti. Tim mereka benar-benar ahli di bidangnya!"
-        </p>
-      </div>
-    </div>
-    <div class="client__btns">
-      <button class="btn" id="prev">
-        <i class="ri-arrow-left-line"></i>
-      </button>
-      <button class="btn" id="next">
-        <i class="ri-arrow-right-line"></i>
-      </button>
-    </div>
-  </section>
+        <!-- Menu Navigation -->
+        <ul id="nav-links"
+            class="hidden flex-col items-center w-full text-base space-y-4 py-5 bg-white shadow-lg md:shadow-none md:flex md:w-2/3 md:flex-row md:justify-evenly md:bg-transparent md:space-y-0 md:py-0 md:relative">
 
-
-  <section class="section__container subscribe__container" id="contact">
-    <h2 class="section__header">
-      Bangun Masa Depan Bersama <span>Java Konsul</span>
-    </h2>
-    <p class="section__description">
-      Kami siap membantu mewujudkan proyek konstruksi Anda dengan standar terbaik, inovasi terkini, dan solusi yang
-      efisien.
-      Hubungi kami untuk berdiskusi lebih lanjut mengenai kebutuhan konstruksi Anda!
-    </p>
-    <form action="/">
-      <input type="text" placeholder="Email Anda" />
-      <button class="btn">Hubungi Kami</button>
-    </form>
-  </section>
-
-
-  <footer>
-    <div class="section__container footer__container">
-      <div class="footer__col">
-        <div class="footer__logo">
-          <a href="#">PT. Java Konsul Utama</a>
-        </div>
-        <p>
-          Kami berkomitmen memberikan solusi layanan terbaik dengan standar tinggi,
-          inovasi, dan ketepatan waktu. Hubungi kami untuk proyek pembangunan yang berkualitas dan terpercaya.
-        </p>
-        <ul class="footer__socials">
-          <li>
-            <a href="#"><i class="ri-facebook-fill"></i></a>
-          </li>
-          <li>
-            <a href="#"><i class="ri-linkedin-fill"></i></a>
-          </li>
-          <li>
-            <a href="#"><i class="ri-instagram-line"></i></a>
-          </li>
+            <li><a href="index.html" class="hover:text-red-500 transition-colors">Beranda</a></li>
+            <li><a href="about.html" class="hover:text-red-500 transition-colors">Tentang Kami</a></li>
+            <li><a href="services.html" class="hover:text-red-500 transition-colors">Layanan Kami</a></li>
+            <li><a href="portfolio.html" class="hover:text-red-500 transition-colors">Portfolio Kami</a></li>
+            <li><a href="article.html" class="hover:text-red-500 transition-colors">Artikel</a></li>
+            <li><a href="contact.html" class="hover:text-red-500 transition-colors">Hubungi Kami</a></li>
         </ul>
-      </div>
-      <div class="footer__col">
-        <h4>Menu</h4>
-        <ul class="footer__links">
-          <li><a href="#">Tentang Kami</a></li>
-          <li><a href="#">Proyek Kami</a></li>
-          <li><a href="#">Layanan Kami</a></li>
-          <li><a href="#">Konsultasi</a></li>
-          <li><a href="#">Kebijakan Privasi</a></li>
-        </ul>
-      </div>
-      <div class="footer__col">
-        <h4>Galeri Proyek</h4>
-        <div class="footer__col__flex">
-          <img src="assets/port-1.jpg" alt="proyek" />
-          <img src="assets/port-2.jpg" alt="proyek" />
-          <img src="assets/port-3.jpg" alt="proyek" />
-          <img src="assets/port-1.jpg" alt="proyek" />
-          <img src="assets/port-2.jpg" alt="proyek" />
-          <img src="assets/port-3.jpg" alt="proyek" />
+    </nav>
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const menuIcon = document.getElementById('menu-icon');
+        const navLinks = document.getElementById('nav-links');
+
+        menuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('hidden');
+            navLinks.classList.toggle('flex');
+            menuIcon.innerHTML = navLinks.classList.contains('hidden') ? '&#9776;' : '&times;';
+        });
+    </script>
+
+    <header id="home"
+        class="relative container max-w-screen-lg mx-auto px-4 pt-32 md:pt-12 py-12 grid md:grid-cols-2 grid-cols-1 gap-8 items-center overflow-hidden">
+        <!-- Particles Background -->
+        <div id="particles-js" class="absolute inset-0 w-full h-full -z-10"></div>
+
+        <!-- Teks di kiri -->
+        <div class="text-center md:text-left md:self-start md:order-1 order-2">
+            <h1 class="text-3xl md:text-5xl font-bold text-gray-900 leading-tight">
+                <span class="text-blue-800">Bangun Masa Depan</span> Bersama Ahlinya!
+            </h1>
+            <p class="text-gray-700 mt-4 max-w-xl text-lg text-justify">
+                <span class="text-sm text-gray-500 font-medium">
+                    #Survey #Pengukuran #Perencanaan #ManajemenKonstruksi
+                </span>
+                <br>
+                <span class="font-medium">PT. Java Konsul Utama</span> hadir sebagai mitra terpercaya untuk
+                solusi konstruksi terpercaya dalam bidang Survey, Pengukuran, Perencanaan, dan
+                Manajemen Konstruksi. Dengan tim profesional dan teknologi terbaru, kami memastikan setiap proyek
+                berjalan presisi, efisien, dan sesuai standar terbaik.
+            </p>
+            <div class="flex flex-wrap gap-4 mt-4">
+                <a href="#services"
+                    class="px-6 py-3 bg-blue-800 text-white font-medium rounded-lg shadow-lg hover:bg-blue-900 transition">
+                    Lihat Layanan
+                </a>
+                <a href="#contact"
+                    class="px-6 py-3 border border-gray-400 text-gray-900 font-medium rounded-lg hover:bg-gray-100 transition">
+                    Hubungi Kami
+                </a>
+            </div>
         </div>
-      </div>
-      <div class="footer__col">
-        <h4>Kontak</h4>
-        <ul class="footer__links">
-          <li>
-            <a href="#">
-              <span><i class="ri-phone-fill"></i></span> +62 112-497-999
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <span><i class="ri-map-pin-fill"></i></span> Jl. Hasan Saputra IV No. 28, Turangga, Lengkong, Bandung,
-              Indonesia
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <span><i class="ri-mail-fill"></i></span> javakonsulutama@gmail.com
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer__bar">
-      Copyright © 2025 PT. Java Konsul Utama. Semua hak cipta dilindungi.
-    </div>
-  </footer>
+
+        <!-- Gambar di kanan -->
+        <div class="relative grid gap-2 grid-cols-2 grid-rows-2 md:order-2 order-1">
+            <img src="assets/bg.png" alt="icon" class="absolute top-0 left-0 h-24 w-24 object-contain">
+            <img src="assets/bg.png" alt="icon"
+                class="absolute top-0 right-0 h-24 w-24 object-contain rotate-280 scale-x-[-1]">
+
+            <img src="assets/head.jpg" alt="header" class="w-full h-48 rounded-tl-lg shadow-lg object-cover">
+            <img src="assets/head-2.jpg" alt="header" class="w-full h-48 rounded-tr-lg shadow-lg object-cover">
+            <img src="assets/head-3.jpg" alt="header" class="w-full h-48 rounded-bl-lg shadow-lg object-cover">
+            <img src="assets/head-3.jpg" alt="header" class="w-full h-48 rounded-br-lg shadow-lg object-cover">
+        </div>
+    </header>
+
+    <script>
+        particlesJS("particles-js", {
+            particles: {
+                number: { value: 150, density: { enable: true, value_area: 600 } },
+                color: { value: "#0099ff" },
+                shape: {
+                    type: "circle",
+                    stroke: { width: 0, color: "#000000" },
+                    polygon: { nb_sides: 5 }
+                },
+                opacity: { value: 0.6, random: true },
+                size: { value: 4, random: true },
+                line_linked: {
+                    enable: true,
+                    distance: 120,
+                    color: "#0099ff",
+                    opacity: 0.6,
+                    width: 1.2
+                },
+                move: {
+                    enable: true,
+                    speed: 3,
+                    direction: "none",
+                    random: false,
+                    straight: false,
+                    out_mode: "out",
+                    bounce: false
+                }
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: {
+                    onhover: { enable: true, mode: ["repulse", "bubble"] },
+                    onclick: { enable: true, mode: "push" },
+                    resize: true
+                },
+                modes: {
+                    repulse: { distance: 120, duration: 0.5 },
+                    bubble: { distance: 150, size: 6, duration: 2, opacity: 0.8 },
+                    push: { particles_nb: 6 }
+                }
+            },
+            retina_detect: true
+        });
+    </script>
+
+    <section id="why-choose-us" class="container max-w-screen-lg mx-auto px-4 py-16">
+        <div class="grid md:grid-cols-2 grid-cols-1 gap-8 items-center">
+
+            <!-- Gambar di kiri -->
+            <div class="relative md:order-1 order-2">
+                <!-- Card di belakang gambar -->
+                <div
+                    class="absolute -bottom-4 -left-4 md:-bottom-8 md:-left-8 w-full h-full bg-blue-100 rounded-lg shadow-lg z-0">
+                </div>
+
+                <!-- Gambar utama -->
+                <img src="assets/choose.jpg" alt="Kenapa Memilih Kami"
+                    class="w-full h-auto rounded-lg shadow-lg relative z-10">
+            </div>
 
 
-  <script src="https://unpkg.com/scrollreveal"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="main.js"></script>
+            <!-- Konten teks di kanan -->
+            <div class="md:order-2 order-1">
+                <h2 class="text-lg font-bold text-blue-800 leading-tight">
+                    Kenapa Memilih Kami?
+                </h2>
+                <p class="text-3xl text-gray-700 mt-4 font-medium">
+                    Rencanakan Konstruksi Anda <span class="text-blue-800 font-semibold">Bersama Kami</span>
+                </p>
+                <div class="mt-6 space-y-6">
+                    <div class="flex gap-4">
+                        <div class="text-blue-800 text-3xl">✔️</div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-900">Komitmen pada Kepuasan Klien</h3>
+                            <p class="text-gray-700 text-justify">
+                                Kami bekerja dengan transparansi, profesionalisme, dan komunikasi yang jelas agar setiap
+                                proyek berjalan sesuai harapan klien.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="text-blue-800 text-3xl">✔️</div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-900">Keahlian & Pengalaman Teruji</h3>
+                            <p class="text-gray-700 text-justify">
+                                Dengan pengalaman bertahun-tahun di bidang Survey, Pengukuran, Perencanaan, dan
+                                Manajemen Konstruksi, kami telah menangani berbagai proyek berskala nasional dengan
+                                hasil yang presisi dan berkualitas.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="text-blue-800 text-3xl">✔️</div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-900">Jaminan Harga Terbaik</h3>
+                            <p class="text-gray-700 text-justify">
+                                Dari perencanaan hingga pengawasan konstruksi, kami menyediakan solusi menyeluruh yang
+                                memastikan proyek berjalan lancar, tepat waktu, dan sesuai standar.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative w-full">
+                    <img src="assets/bg.png" alt="icon" class="absolute top-0 left-0 h-24 w-24 object-contain">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services relative bg-[#e1e8e1] bg-cover bg-fixed"
+        style="background-image: url('assets/bg-services.jpg');">
+
+        <div class="container mx-auto p-6">
+            <div class="flex flex-col md:flex-row items-center space-y-4 pl-0 md:space-x-6 md:pl-[350px]">
+                <!-- Badge Best Service -->
+                <div
+                    class="inline-flex w-[400px] items-center bg-gradient-to-r from-blue-700 to-blue-900  border-2 border-blue-400 text-white justify-center font-semibold px-5 py-2 rounded-full shadow-md text-center mx-auto">
+                    *Best Service
+                </div>
+
+                <!-- Konten Teks -->
+                <div class="text-center md:text-left px-4">
+                    <h2 class="text-2xl font-bold text-blue-800 uppercase tracking-wide">
+                        Perencanaan (Feasibility Study & Master Plan)
+                    </h2>
+                    <p class="text-sm text-gray-700 mt-2 font-medium">
+                        PT. Java Konsul Utama menghadirkan layanan perencanaan komprehensif yang mencakup studi
+                        kelayakan (feasibility study) serta penyusunan master plan. Kami membantu menganalisis aspek
+                        teknis, ekonomi, dan lingkungan untuk memastikan proyek dapat berjalan dengan efisien,
+                        berkelanjutan, dan sesuai dengan standar yang berlaku.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Grid Cards -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-12">
+                <!-- Card 1 -->
+                <div
+                    class="group bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2 text-center">
+                    <div class="flex justify-center mb-4">
+                        <img src="assets/icon1.png" alt="Survey & Pengukuran" class="h-16 w-16">
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900">Survey & Pengukuran</h3>
+                    <p class="text-gray-600 mt-3">Pengukuran lahan dengan teknologi canggih untuk hasil yang lebih
+                        akurat.</p>
+                </div>
+
+                <!-- Card 2 (Best Service) -->
+                <div
+                    class="group relative bg-gradient-to-r from-blue-700 to-blue-900 p-8 rounded-2xl shadow-2xl hover:shadow-3xl transition duration-300 transform -translate-y-2 hover:-translate-y-0 text-center border-2 border-blue-400">
+                    <div
+                        class="absolute top-3 right-3 bg-blue-400 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">
+                        ⭐
+                    </div>
+                    <div class="flex justify-center mb-4">
+                        <img src="assets/icon2.png" alt="Perencanaan Master Plan" class="h-20 w-20">
+                    </div>
+                    <h3 class="text-xl font-bold text-white uppercase tracking-wide">Perencanaan Master Plan</h3>
+                    <p class="text-gray-200 mt-4 text-lg font-medium">Penyusunan rencana strategis proyek agar lebih
+                        efisien.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div
+                    class="group bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2 text-center">
+                    <div class="flex justify-center mb-4">
+                        <img src="assets/icon3.png" alt="Perancangan Teknik" class="h-16 w-16">
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900">Perancangan Teknik</h3>
+                    <p class="text-gray-600 mt-3">Desain teknis yang presisi dan sesuai standar.</p>
+                </div>
+
+                <!-- Card 4 -->
+                <div
+                    class="group bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2 text-center">
+                    <div class="flex justify-center mb-4">
+                        <img src="assets/icon4.png" alt="Manajemen Konstruksi" class="h-16 w-16">
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900">Manajemen Konstruksi</h3>
+                    <p class="text-gray-600 mt-3">Pengelolaan proyek dengan sistem yang terorganisir untuk hasil yang
+                        optimal.</p>
+                </div>
+
+                <!-- Card 5 -->
+                <div
+                    class="group bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2 text-center">
+                    <div class="flex justify-center mb-4">
+                        <img src="assets/icon5.png" alt="Computerized Data Processing" class="h-16 w-16">
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900">Computerized Data Processing</h3>
+                    <p class="text-gray-600 mt-3">Pemrosesan data berbasis teknologi untuk meningkatkan efisiensi proyek
+                        konstruksi.</p>
+                </div>
+
+                <!-- Card 6 -->
+                <div
+                    class="group bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2 text-center">
+                    <div class="flex justify-center mb-4">
+                        <img src="assets/icon6.png" alt="Analisis Struktur Tanah" class="h-16 w-16">
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900">Analisis Struktur Tanah</h3>
+                    <p class="text-gray-600 mt-3">Kajian mendalam mengenai struktur tanah untuk memastikan ketahanan
+                        bangunan.</p>
+                </div>
+            </div>
+        </div>
+        </div>
+
+    </section>
+
+    <section class="clients bg-gray-100 py-12">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-2xl font-bold text-gray-800 uppercase tracking-wide">Klien Kami</h2>
+            <p class="text-gray-600 mt-3">Beberapa perusahaan yang telah bekerja sama dengan kami.</p>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 mt-8">
+                <div class="flex justify-center">
+                    <img src="/assets/logo.png" alt="Client 1"
+                        class="h-16 grayscale hover:grayscale-0 transition duration-300">
+                </div>
+                <div class="flex justify-center">
+                    <img src="/assets/logo.png" alt="Client 2"
+                        class="h-16 grayscale hover:grayscale-0 transition duration-300">
+                </div>
+                <div class="flex justify-center">
+                    <img src="/assets/logo.png" alt="Client 3"
+                        class="h-16 grayscale hover:grayscale-0 transition duration-300">
+                </div>
+                <div class="flex justify-center">
+                    <img src="/assets/logo.png" alt="Client 4"
+                        class="h-16 grayscale hover:grayscale-0 transition duration-300">
+                </div>
+                <div class="flex justify-center">
+                    <img src="/assets/logo.png" alt="Client 5"
+                        class="h-16 grayscale hover:grayscale-0 transition duration-300">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="relative py-16 bg-gray-100 px-20">
+        <div class="container mx-auto">
+            <div class="text-left">
+                <p class="text-blue-800 text-lg font-semibold uppercase">Apa Kata Klien Kami?</p>
+                <h2 class="text-3xl font-bold text-gray-800 mt-2">Testimoni <span class="text-blue-800">Klien</span>
+                </h2>
+            </div>
+
+
+            <!-- Navigation Buttons -->
+            <div class="flex justify-end space-x-4 mb-2">
+                <button id="prev"
+                    class="bg-blue-700 text-white p-3 rounded-full shadow-lg hover:bg-blue-800 transition">
+                    &lt;
+                </button>
+                <button id="next"
+                    class="bg-blue-700 text-white p-3 rounded-full shadow-lg hover:bg-blue-800 transition">
+                    &gt;
+                </button>
+            </div>
+
+
+            <div
+                class="relative flex flex-col md:flex-row items-center md:items-start space-y-8 md:space-y-0 md:space-x-8">
+                <!-- Image Section -->
+                <div class="relative w-72 h-72">
+                    <!-- Card di belakang gambar -->
+                    <div class="absolute -bottom-4 -left-4 w-full h-full border-2 border-gray-400 rounded-lg z-0">
+                    </div>
+
+                    <!-- Gambar (Harus di depan card) -->
+                    <img id="client-img" src="assets/client-1.jpg" alt="client"
+                        class="relative w-full h-full object-cover shadow-md rounded-lg z-10" />
+                </div>
+
+                <!-- Testimonial Card -->
+                <div class="relative bg-white shadow-lg rounded-xl p-6 md:w-full">
+                    <h4 id="client-name" class="text-lg font-semibold">Desi Permatasari</h4>
+                    <h5 id="client-position" class="text-gray-600 text-sm">Project Manager PT. XYZ</h5>
+                    <p id="client-text" class="text-gray-700 mt-3">
+                        "Tim PT. Java Konsul Utama sangat profesional! Mereka memastikan setiap tahapan proyek berjalan
+                        sesuai rencana dengan pengawasan yang ketat. Hasil pekerjaan mereka berkualitas tinggi dan
+                        selalu tepat waktu. Kami sangat puas!"
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const clients = [
+            {
+                img: "assets/client-1.jpg",
+                name: "Desi Permatasari",
+                position: "Project Manager PT. XYZ",
+                text: "Tim PT. Java Konsul Utama sangat profesional! Mereka memastikan setiap tahapan proyek berjalan sesuai rencana dengan pengawasan yang ketat. Hasil pekerjaan mereka berkualitas tinggi dan selalu tepat waktu. Kami sangat puas!"
+            },
+            {
+                img: "assets/client-2.jpg",
+                name: "Dian Permadi",
+                position: "Kepala Teknik CV. ABCD",
+                text: "Kami sangat terbantu dengan hasil survey dan pemetaan yang presisi. Data yang diberikan sangat detail dan akurat, membantu kami dalam pengambilan keputusan teknis. Terima kasih atas dedikasi dan profesionalisme tim!"
+            },
+            {
+                img: "assets/client-3.jpg",
+                name: "Rina Kusuma",
+                position: "Kepala Desa",
+                text: "Dokumen perencanaan dan perancangan dari PT. Java Konsul Utama sangat matang dan terstruktur. Hal ini membuat proses pembangunan berjalan lancar tanpa kendala berarti. Tim mereka benar-benar ahli di bidangnya!"
+            }
+        ];
+
+        let currentIndex = 0;
+
+        document.getElementById("prev").addEventListener("click", () => {
+            currentIndex = (currentIndex - 1 + clients.length) % clients.length;
+            updateClient();
+        });
+
+        document.getElementById("next").addEventListener("click", () => {
+            currentIndex = (currentIndex + 1) % clients.length;
+            updateClient();
+        });
+
+        function updateClient() {
+            document.getElementById("client-img").src = clients[currentIndex].img;
+            document.getElementById("client-name").textContent = clients[currentIndex].name;
+            document.getElementById("client-position").textContent = clients[currentIndex].position;
+            document.getElementById("client-text").textContent = clients[currentIndex].text;
+        }
+    </script>
+
+    <section class="py-16 px-8">
+        <div class="container mx-auto max-w-full">
+            <h2 class="text-3xl font-bold text-gray-800">Pertanyaan Yang Sering Diajukan</h2>
+            <p class="text-gray-600 mt-2">Temukan jawaban atas pertanyaan seputar layanan kami.</p>
+
+            <!-- QnA Accordion -->
+            <div class="mt-8 space-y-4">
+                <!-- Item 1 -->
+                <div class="border rounded-lg shadow-md overflow-hidden">
+                    <button
+                        class="w-full text-left p-4 bg-blue-800 text-white font-semibold flex justify-between items-center toggle-btn">
+                        Apa saja layanan yang tersedia oleh java konsul utama?
+                        <span class="icon">+</span>
+                    </button>
+                    <div class="p-4 text-gray-700 hidden">
+                        Kami menawarkan layanan seperti perencanaan proyek, manajemen konstruksi, pengawasan, studi
+                        kelayakan, dan desain struktur.
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="border rounded-lg shadow-md overflow-hidden">
+                    <button
+                        class="w-full text-left p-4 bg-blue-800 text-white font-semibold flex justify-between items-center toggle-btn">
+                        Bagaimana proses kerja sama dengan java konsul utama
+                        <span class="icon">+</span>
+                    </button>
+                    <div class="p-4 text-gray-700 hidden">
+                        Proses kerja sama dimulai dengan konsultasi awal, analisis kebutuhan proyek, penyusunan rencana,
+                        hingga implementasi dan pengawasan proyek.
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="border rounded-lg shadow-md overflow-hidden">
+                    <button
+                        class="w-full text-left p-4 bg-blue-800 text-white font-semibold flex justify-between items-center toggle-btn">
+                        Berapa lama waktu yang dibutuhkan untuk menyelesaikan proyek?
+                        <span class="icon">+</span>
+                    </button>
+                    <div class="p-4 text-gray-700 hidden">
+                        Waktu pengerjaan tergantung pada skala dan kompleksitas proyek. Proyek kecil bisa memakan waktu
+                        beberapa minggu, sedangkan proyek besar bisa berbulan-bulan hingga tahunan.
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="border rounded-lg shadow-md overflow-hidden mt-4">
+                    <button
+                        class="w-full text-left p-4 bg-blue-800 text-white font-semibold flex justify-between items-center toggle-btn">
+                        Apakah konsultasi awal tersedia untuk semua jenis proyek?
+                        <span class="icon">+</span>
+                    </button>
+                    <div class="p-4 text-gray-700 hidden">
+                        Ya, kami menyediakan konsultasi awal untuk semua jenis proyek guna memahami kebutuhan dan
+                        memberikan solusi terbaik bagi Anda.
+                    </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="border rounded-lg shadow-md overflow-hidden">
+                    <button
+                        class="w-full text-left p-4 bg-blue-800 text-white font-semibold flex justify-between items-center toggle-btn">
+                        Bagaimana cara mendapatkan penawaran harga untuk proyek saya?
+                        <span class="icon">+</span>
+                    </button>
+                    <div class="p-4 text-gray-700 hidden">
+                        Anda bisa menghubungi kami melalui WhatsApp atau email dengan rincian proyek Anda. Tim kami akan
+                        memberikan estimasi biaya berdasarkan kebutuhan proyek Anda.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.querySelectorAll(".toggle-btn").forEach(button => {
+            button.addEventListener("click", function () {
+                const content = this.nextElementSibling;
+                const icon = this.querySelector(".icon");
+
+                if (content.classList.contains("hidden")) {
+                    document.querySelectorAll(".toggle-btn").forEach(btn => {
+                        btn.nextElementSibling.classList.add("hidden");
+                        btn.querySelector(".icon").textContent = "+";
+                    });
+                    content.classList.remove("hidden");
+                    icon.textContent = "-";
+                } else {
+                    content.classList.add("hidden");
+                    icon.textContent = "+";
+                }
+            });
+        });
+    </script>
+
+    <section class="relative py-16 px-8 text-gray-900 text-center">
+        <div
+            class="container mx-auto flex flex-col md:flex-row items-center justify-between space-y-12 md:space-y-0 md:space-x-12 p-8 rounded-lg shadow-lg">
+            <!-- Text Section -->
+            <div class="md:w-1/2 text-center md:text-left">
+                <h2 class="text-3xl md:text-4xl font-bold leading-tight">
+                    Ada proyek impian yang ingin diwujudkan?
+                </h2>
+                <p class="mt-4 text-lg text-gray-700">
+                    Jangan ragu, wujudkan bersama kami! Kami siap membantu Anda dengan solusi terbaik. Ayo, mulai
+                    sekarang!
+                </p>
+                <div class="mt-8 flex justify-center md:justify-start space-x-4">
+                    <a href="#"
+                        class="bg-blue-800 text-white font-semibold px-6 py-3 rounded-lg shadow-md hover:bg-blue-900 transition">
+                        Hubungi Kami
+                    </a>
+                    <a href="#"
+                        class="bg-gray-900 text-white font-semibold px-6 py-3 rounded-lg shadow-md hover:bg-gray-800 transition">
+                        Mulai Sekarang
+                    </a>
+                </div>
+            </div>
+
+            <!-- Image Section -->
+            <div class="md:w-1/2 flex justify-center">
+                <img src="assets/cta-image.png" alt="Kerja Sama" class="w-64 md:w-80 lg:w-96">
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-gray-300 py-16">
+        <div class="container mx-auto px-6 lg:px-12 grid grid-cols-1 md:grid-cols-3 gap-10">
+
+            <!-- Kolom 1: Tentang Perusahaan dengan Logo -->
+            <div>
+                <div class="flex items-start">
+                    <img src="assets/logo.png" alt="Logo PT. Java Konsul Utama" class="w-14 mb-4">
+                    <div class="ml-3">
+                        <span class="block text-lg md:text-xl font-bold text-white">
+                            PT. JAVA KONSUL UTAMA
+                        </span>
+                        <span class="text-[0.5rem] font-semibold text-red-400">
+                            Civil Engineering · Planning · Soil Investigation · General Consultant
+                        </span>
+                    </div>
+                </div>
+                <p class="mt-3 text-gray-400">
+                    Konsultan profesional dalam perencanaan dan pengelolaan proyek sipil, memastikan solusi terbaik
+                    untuk setiap kebutuhan konstruksi Anda.
+                </p>
+            </div>
+
+            <!-- Kolom 2: Layanan -->
+            <div>
+                <h3 class="text-lg font-semibold text-white">Layanan</h3>
+                <ul class="mt-4 space-y-3">
+                    <li><a href="#" class="text-gray-400 hover:text-gray-100 transition">Survey Pengukuran dan
+                            Penyelidikan</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-gray-100 transition">Perencanaan Master Plan</a>
+                    </li>
+                    <li><a href="#" class="text-gray-400 hover:text-gray-100 transition">Perancangan Teknik</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-gray-100 transition">Computered Data Processing</a>
+                    </li>
+                    <li><a href="#" class="text-gray-400 hover:text-gray-100 transition">Manajemen Kontruksi
+                            Suvervisi</a></li>
+                </ul>
+            </div>
+
+            <!-- Kolom 3: Kontak -->
+            <div>
+                <h3 class="text-lg font-semibold text-white">Hubungi Kami</h3>
+                <div class="mt-4 space-y-4">
+                    <!-- Alamat Kantor -->
+                    <div class="flex items-start space-x-3">
+                        <svg class="w-5 h-5 text-blue-400 mt-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                            fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M10 2a6 6 0 00-6 6c0 4.5 6 10 6 10s6-5.5 6-10a6 6 0 00-6-6zm0 8.5A2.5 2.5 0 1110 5a2.5 2.5 0 010 5z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        <p class="text-gray-400"><span class="font-medium text-white">Kantor:</span> Jl Pasopati RT.
+                            002/003, Madalasari, Cikancung, Kab Bandung, Jawa Barat</p>
+                    </div>
+
+                    <!-- Alamat Studio -->
+                    <div class="flex items-start space-x-3">
+                        <svg class="w-5 h-5 text-green-400 mt-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                            fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M10 2a6 6 0 00-6 6c0 4.5 6 10 6 10s6-5.5 6-10a6 6 0 00-6-6zm0 8.5A2.5 2.5 0 1110 5a2.5 2.5 0 010 5z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        <p class="text-gray-400"><span class="font-medium text-white">Studio:</span> Jl Hasan Saputra IV
+                            No. 20, Turangga, Lengkong, Kota Bandung, Jawa Barat</p>
+                    </div>
+
+                    <!-- Nomor HP -->
+                    <div class="flex items-center space-x-3">
+                        <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                            fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M3 3a2 2 0 012-2h10a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V3zm7 12a1 1 0 100 2 1 1 0 000-2zm1-2.5a1 1 0 10-2 0v1a1 1 0 002 0v-1z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        <p class="text-gray-400">+62 8112497999</p>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="flex items-center space-x-3">
+                        <svg class="w-5 h-5 text-red-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                            fill="currentColor">
+                            <path d="M2.003 5.884L10 10.882l7.997-4.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                            <path d="M18 8.118l-8 5-8-5V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                        </svg>
+                        <p class="text-gray-400">javakonsulutama@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Garis Pemisah & Copyright -->
+        <div class="mt-10 border-t border-gray-700 text-center text-gray-500 py-5">
+            <p>© 2025 PT. Java Konsul Utama. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+    <!-- Back to Top Button -->
+    <button id="backToTop"
+        class="hidden fixed bottom-6 right-6 bg-blue-600 text-white p-3 rounded-full shadow-lg transition-opacity duration-300 hover:bg-blue-700">
+        ⬆️
+    </button>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const backToTop = document.getElementById("backToTop");
+
+            window.addEventListener("scroll", function () {
+                if (window.scrollY > 200) { // Muncul saat scroll lebih dari 200px
+                    backToTop.classList.remove("hidden");
+                } else {
+                    backToTop.classList.add("hidden");
+                }
+            });
+
+            backToTop.addEventListener("click", function () {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            });
+        });
+    </script>
+
+
 </body>
 
 </html>
