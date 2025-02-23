@@ -532,15 +532,15 @@
         });
     </script>
 
-    <section class="relative py-16 px-8 text-gray-900 text-center">
+    <section class="relative py-16 px-8 text-center">
         <div
-            class="container mx-auto flex flex-col md:flex-row items-center justify-between space-y-12 md:space-y-0 md:space-x-12 p-8 rounded-lg shadow-lg">
+            class="container bg-gradient-to-r from-blue-900 to-blue-700 mx-auto flex flex-col md:flex-row items-center justify-between space-y-12 md:space-y-0 md:space-x-12 p-8 rounded-lg shadow-lg">
             <!-- Text Section -->
             <div class="md:w-1/2 text-center md:text-left">
-                <h2 class="text-3xl md:text-4xl font-bold leading-tight">
+                <h2 class="text-3xl md:text-4xl font-bold leading-tight text-white">
                     Ada proyek impian yang ingin diwujudkan?
                 </h2>
-                <p class="mt-4 text-lg text-gray-700">
+                <p class="mt-4 text-lg text-red-500">
                     Jangan ragu, wujudkan bersama kami! Kami siap membantu Anda dengan solusi terbaik. Ayo, mulai
                     sekarang!
                 </p>
@@ -551,7 +551,7 @@
                     </a>
                     <a href="#"
                         class="bg-gray-900 text-white font-semibold px-6 py-3 rounded-lg shadow-md hover:bg-gray-800 transition">
-                        Mulai Sekarang
+                        Lebih Lanjut
                     </a>
                 </div>
             </div>
@@ -563,14 +563,15 @@
         </div>
     </section>
 
-    <footer class="bg-gray-900 text-gray-300 py-16">
-        <div class="container mx-auto px-6 lg:px-12 grid grid-cols-1 md:grid-cols-3 gap-10">
+    <footer class="relative bg-gradient-to-r from-gray-900 via-blue-900 to-gray-800 text-gray-300 py-16">
+        <div class="absolute inset-0 bg-black/40"></div> <!-- Overlay Transparan -->
+        <div class="relative container mx-auto px-6 lg:px-12 grid grid-cols-1 md:grid-cols-3 gap-10">
 
             <!-- Kolom 1: Tentang Perusahaan dengan Logo -->
             <div>
                 <div class="flex items-start">
                     <img src="assets/logo.png" alt="Logo PT. Java Konsul Utama" class="w-14 mb-4">
-                    <div class="ml-3">
+                    <div class="ml-2">
                         <span class="block text-lg md:text-xl font-bold text-white">
                             PT. JAVA KONSUL UTAMA
                         </span>
@@ -589,15 +590,16 @@
             <div>
                 <h3 class="text-lg font-semibold text-white">Layanan</h3>
                 <ul class="mt-4 space-y-3">
-                    <li><a href="#" class="text-gray-400 hover:text-gray-100 transition">Survey Pengukuran dan
-                            Penyelidikan</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-gray-100 transition">Perencanaan Master Plan</a>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Survey Pengukuran</a>
                     </li>
-                    <li><a href="#" class="text-gray-400 hover:text-gray-100 transition">Perancangan Teknik</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-gray-100 transition">Computered Data Processing</a>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Perencanaan Master
+                            Plan</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Perancangan
+                            Teknik</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Data Processing</a>
                     </li>
-                    <li><a href="#" class="text-gray-400 hover:text-gray-100 transition">Manajemen Kontruksi
-                            Suvervisi</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Manajemen
+                            Konstruksi</a></li>
                 </ul>
             </div>
 
@@ -607,7 +609,7 @@
                 <div class="mt-4 space-y-4">
                     <!-- Alamat Kantor -->
                     <div class="flex items-start space-x-3">
-                        <svg class="w-5 h-5 text-blue-400 mt-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                        <svg class="w-5 h-5 text-blue-500 mt-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
                             fill="currentColor">
                             <path fill-rule="evenodd"
                                 d="M10 2a6 6 0 00-6 6c0 4.5 6 10 6 10s6-5.5 6-10a6 6 0 00-6-6zm0 8.5A2.5 2.5 0 1110 5a2.5 2.5 0 010 5z"
@@ -619,7 +621,7 @@
 
                     <!-- Alamat Studio -->
                     <div class="flex items-start space-x-3">
-                        <svg class="w-5 h-5 text-green-400 mt-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                        <svg class="w-5 h-5 text-green-500 mt-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
                             fill="currentColor">
                             <path fill-rule="evenodd"
                                 d="M10 2a6 6 0 00-6 6c0 4.5 6 10 6 10s6-5.5 6-10a6 6 0 00-6-6zm0 8.5A2.5 2.5 0 1110 5a2.5 2.5 0 010 5z"
@@ -631,7 +633,7 @@
 
                     <!-- Nomor HP -->
                     <div class="flex items-center space-x-3">
-                        <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                        <svg class="w-5 h-5 text-yellow-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
                             fill="currentColor">
                             <path fill-rule="evenodd"
                                 d="M3 3a2 2 0 012-2h10a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V3zm7 12a1 1 0 100 2 1 1 0 000-2zm1-2.5a1 1 0 10-2 0v1a1 1 0 002 0v-1z"
@@ -642,7 +644,7 @@
 
                     <!-- Email -->
                     <div class="flex items-center space-x-3">
-                        <svg class="w-5 h-5 text-red-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                        <svg class="w-5 h-5 text-red-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
                             fill="currentColor">
                             <path d="M2.003 5.884L10 10.882l7.997-4.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
                             <path d="M18 8.118l-8 5-8-5V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
@@ -654,7 +656,7 @@
         </div>
 
         <!-- Garis Pemisah & Copyright -->
-        <div class="mt-10 border-t border-gray-700 text-center text-gray-500 py-5">
+        <div class="mt-10 border-t border-gray-700 text-center text-gray-100 py-5">
             <p>© 2025 PT. Java Konsul Utama. All rights reserved.</p>
         </div>
     </footer>
