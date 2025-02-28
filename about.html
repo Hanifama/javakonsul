@@ -144,10 +144,11 @@
     </section>
 
     <section class="w-full bg-gray-50 py-12">
-        <div class="max-w-5xl mx-auto px-6">
-            <h2 class="text-3xl font-semibold text-center text-gray-800 mb-8">Visi & Misi</h2>
+        <div class="max-w-5xl mx-auto px-6 md:flex md:items-center">
+            <!-- Bagian Teks (Visi & Misi) -->
+            <div class="md:w-1/2 space-y-6">
+                <h2 class="text-3xl font-semibold text-gray-800">VISI DAN MISI</h2>
 
-            <div class="grid md:grid-cols-2 gap-8">
                 <!-- Visi -->
                 <div class="bg-white shadow-md rounded-lg p-6 border-l-4 border-blue-600">
                     <h3 class="text-xl font-bold text-blue-900 mb-3">Visi</h3>
@@ -159,8 +160,8 @@
                 </div>
 
                 <!-- Misi -->
-                <div class="bg-white shadow-md rounded-lg p-6 border-l-4 border-green-600">
-                    <h3 class="text-xl font-bold text-green-900 mb-3">Misi</h3>
+                <div class="bg-white shadow-md rounded-lg p-6 border-l-4 border-red-600">
+                    <h3 class="text-xl font-bold text-red-600 mb-3">Misi</h3>
                     <p class="text-gray-700 leading-relaxed">
                         PT Java Konsul Utama diharapkan akan memberikan warna baru dalam dunia jasa konsultan teknik
                         dengan kesiapan ilmu-ilmu dari tenaga-tenaga ahli yang dimiliki oleh PT Java Konsul Utama yang
@@ -168,6 +169,11 @@
                         sebagai wujud dari kesungguhan untuk ikut serta dalam pembangunan.
                     </p>
                 </div>
+            </div>
+
+            <!-- Bagian Gambar -->
+            <div class="md:w-1/2 mt-8 md:mt-0">
+                <img src="assets/explore.jpg" alt="Visi & Misi" class="w-full rounded-lg shadow-md">
             </div>
         </div>
     </section>
@@ -196,7 +202,12 @@
 
                 <!-- Tab Content (Kanan di Desktop, Full di Mobile) -->
                 <div class="w-full md:w-3/4">
-                    <div id="manajemen" class="tab-content block">
+                    <div id="organigram-container" class="w-full flex justify-center">
+                        <img src="assets/image.png" alt="Organigram"
+                            class="rounded-lg shadow-lg w-full">
+                    </div>
+
+                    <div id="manajemen" class="tab-content block hidden">
                         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                             <div
                                 class="bg-white shadow-lg rounded-lg p-6 text-center transition duration-300 hover:shadow-xl">
@@ -375,20 +386,31 @@
     </section>
 
     <script>
-        document.querySelectorAll('.tab-button').forEach(button => {
-            button.addEventListener('click', () => {
-                // Reset semua tombol
-                document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('bg-blue-500', 'text-white'));
-                // Sembunyikan semua tab
-                document.querySelectorAll('.tab-content').forEach(content => content.classList.add('hidden'));
+        document.addEventListener("DOMContentLoaded", function () {
+            const buttons = document.querySelectorAll(".tab-button");
+            const contents = document.querySelectorAll(".tab-content");
+            const organigram = document.getElementById("organigram-container");
 
-                // Tambahkan efek aktif ke tombol yang diklik
-                button.classList.add('bg-blue-500', 'text-white');
-                // Tampilkan tab yang sesuai
-                document.getElementById(button.dataset.tab).classList.remove('hidden');
+            buttons.forEach(button => {
+                button.addEventListener("click", function () {
+                    // Hilangkan organigram saat tab diklik
+                    organigram.classList.add("hidden");
+
+                    // Hilangkan semua konten tab
+                    contents.forEach(content => content.classList.add("hidden"));
+
+                    // Tampilkan konten yang sesuai dengan tab yang diklik
+                    const target = document.getElementById(this.dataset.tab);
+                    target.classList.remove("hidden");
+
+                    // Hapus class active dari semua tombol, lalu tambahkan ke tombol yang diklik
+                    buttons.forEach(btn => btn.classList.remove("bg-blue-500", "text-white"));
+                    this.classList.add("bg-blue-500", "text-white");
+                });
             });
         });
     </script>
+
 
     <section class="py-20 bg-white">
         <div class="container mx-auto px-6 lg:px-20">
@@ -459,34 +481,21 @@
         </div>
     </section>
 
-    <section class="relative py-16 px-8 text-gray-900 text-center">
+    <section class="relative py-20 px-6 text-center flex justify-center">
         <div
-            class="container mx-auto flex flex-col md:flex-row items-center justify-between space-y-12 md:space-y-0 md:space-x-12 p-8 rounded-lg shadow-lg">
-            <!-- Text Section -->
-            <div class="md:w-1/2 text-center md:text-left">
-                <h2 class="text-3xl md:text-4xl font-bold leading-tight">
-                    Konsultasikan Proyek Konstruksi Anda Sekarang
-                </h2>
-                <p class="mt-4 text-lg text-gray-700">
-                    Jangan ragu, wujudkan bersama kami! Java Konsul Utama siap membantu Anda dengan solusi terbaik. Ayo,
-                    mulai
-                    sekarang!
-                </p>
-                <div class="mt-8 flex justify-center md:justify-start space-x-4">
-                    <a href="#"
-                        class="bg-blue-800 text-white font-semibold px-6 py-3 rounded-lg shadow-md hover:bg-blue-900 transition">
-                        Hubungi Kami
-                    </a>
-                    <a href="#"
-                        class="bg-gray-900 text-white font-semibold px-6 py-3 rounded-lg shadow-md hover:bg-gray-800 transition">
-                        Mulai Sekarang
-                    </a>
-                </div>
-            </div>
-
-            <!-- Image Section -->
-            <div class="md:w-1/2 flex justify-center">
-                <img src="assets/cta-image.png" alt="Kerja Sama" class="w-64 md:w-80 lg:w-96">
+            class="w-full max-w-7xl bg-gradient-to-r from-blue-900 to-blue-700 text-white py-12 px-8 rounded-2xl shadow-2xl">
+            <h2 class="text-4xl md:text-5xl font-extrabold tracking-wide uppercase">
+                Konsultasi Dulu <br><span class="text-red-500">Sepakat Kemudian</span>
+            </h2>
+            <div class="mt-8 flex flex-col md:flex-row justify-center gap-6">
+                <a href="/contact.html"
+                    class="bg-red-600 hover:bg-red-700 text-white text-lg font-bold px-8 py-4 rounded-lg shadow-lg uppercase tracking-wide transition-all transform hover:scale-105">
+                    Hubungi Kami
+                </a>
+                <a href="/portfolio.html"
+                    class="border-2 border-white hover:bg-white hover:text-blue-900 text-white text-lg font-bold px-8 py-4 rounded-lg shadow-lg uppercase tracking-wide transition-all transform hover:scale-105">
+                    Portfolio Kami
+                </a>
             </div>
         </div>
     </section>
