@@ -47,25 +47,25 @@ const Testimonials: React.FC = () => {
     };
 
     return (
-        <section ref={ref} className="relative py-16 bg-gray-100 px-20">
-            <div className="container mx-auto">
+        <section ref={ref} className="relative py-16 bg-gray-100 px-4 md:px-20">
+            <div className="max-w-6xl mx-auto">
                 {/* Header */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={isInView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.6 }}
-                    className="text-left"
+                    className="text-center md:text-left"
                 >
-                    <p className="text-blue-800 text-lg font-semibold uppercase">
+                    <p className="text-blue-800 text-base md:text-lg font-semibold uppercase">
                         Apa Kata Klien Kami?
                     </p>
-                    <h2 className="text-3xl font-bold text-gray-800 mt-2">
+                    <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mt-2">
                         Testimoni <span className="text-blue-800">Klien</span>
                     </h2>
                 </motion.div>
 
                 {/* Navigation Buttons */}
-                <div className="flex justify-end space-x-4 mb-2">
+                <div className="flex justify-center md:justify-end space-x-4 my-6">
                     <motion.button
                         onClick={handlePrev}
                         whileHover={{ scale: 1.1 }}
@@ -73,9 +73,9 @@ const Testimonials: React.FC = () => {
                         initial={{ opacity: 0, scale: 0.8 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.3 }}
-                        className="bg-blue-700 text-white w-12 h-12 flex items-center justify-center rounded-full shadow-lg hover:bg-blue-800 transition"
+                        className="bg-blue-700 text-white w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-full shadow-lg hover:bg-blue-800 transition"
                     >
-                        <ChevronLeft size={24} />
+                        <ChevronLeft size={20} />
                     </motion.button>
 
                     <motion.button
@@ -85,20 +85,20 @@ const Testimonials: React.FC = () => {
                         initial={{ opacity: 0, scale: 0.8 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.3 }}
-                        className="bg-blue-700 text-white w-12 h-12 flex items-center justify-center rounded-full shadow-lg hover:bg-blue-800 transition"
+                        className="bg-blue-700 text-white w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-full shadow-lg hover:bg-blue-800 transition"
                     >
-                        <ChevronRight size={24} />
+                        <ChevronRight size={20} />
                     </motion.button>
                 </div>
 
                 {/* Testimonial Content */}
-                <div className="relative flex flex-col md:flex-row items-center md:items-start space-y-8 md:space-y-0 md:space-x-8">
+                <div className="relative flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-8">
                     {/* Image Section */}
                     <motion.div
                         initial={{ opacity: 0, x: -50 }}
                         animate={isInView ? { opacity: 1, x: 0 } : {}}
                         transition={{ duration: 0.6 }}
-                        className="relative w-72 h-72"
+                        className="relative w-60 h-60 md:w-72 md:h-72"
                     >
                         <div className="absolute -bottom-4 -left-4 w-full h-full border-2 border-gray-400 rounded-lg z-0"></div>
                         <img
@@ -113,11 +113,17 @@ const Testimonials: React.FC = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={isInView ? { opacity: 1, y: 0 } : {}}
                         transition={{ duration: 0.6, delay: 0.2 }}
-                        className="relative bg-white shadow-lg rounded-xl p-6 md:w-full"
+                        className="relative bg-white shadow-lg rounded-xl p-5 md:p-6 w-full"
                     >
-                        <h4 className="text-lg font-semibold">{clients[currentIndex].name}</h4>
-                        <h5 className="text-gray-600 text-sm">{clients[currentIndex].position}</h5>
-                        <p className="text-gray-700 mt-3">{clients[currentIndex].text}</p>
+                        <h4 className="text-lg md:text-xl font-semibold">
+                            {clients[currentIndex].name}
+                        </h4>
+                        <h5 className="text-gray-600 text-sm md:text-base">
+                            {clients[currentIndex].position}
+                        </h5>
+                        <p className="text-gray-700 mt-3 text-sm md:text-base leading-relaxed">
+                            {clients[currentIndex].text}
+                        </p>
                     </motion.div>
                 </div>
             </div>

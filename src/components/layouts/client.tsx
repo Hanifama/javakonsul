@@ -22,7 +22,6 @@ const CLIENTS: Client[] = [
   { id: 10, name: "Client 9", logo: clientImage },
 ];
 
-// Fungsi duplikat list untuk seamless scroll
 const duplicateList = (list: Client[], times: number): Client[] =>
   Array(times).fill(list).flat();
 
@@ -34,7 +33,6 @@ const Clients: React.FC = () => {
     const el = scrollContainerRef.current;
     if (!el) return;
 
-    // Scroll width yang dihitung dari 1 set list (karena diduplikat 3x)
     const oneSetWidth = el.scrollWidth / 3;
     let scrollPos = 0;
     let animationId: number;
@@ -47,29 +45,28 @@ const Clients: React.FC = () => {
     };
 
     scrollStep();
-
     return () => cancelAnimationFrame(animationId);
   }, [scrollSpeed]);
 
   const extendedClients = duplicateList(CLIENTS, 3);
 
   return (
-    <section className="bg-gray-100 py-12 overflow-hidden relative">
-      <div className="overflow-hidden whitespace-nowrap">
+    <section className="bg-gray-100 py-10 sm:py-12 overflow-hidden relative">
+      <div className="container mx-auto overflow-hidden whitespace-nowrap px-4">
         <div
           ref={scrollContainerRef}
-          className="flex gap-10"
+          className="flex gap-6 sm:gap-10"
           style={{ width: "max-content", willChange: "transform" }}
         >
           {extendedClients.map((client, index) => (
             <div
               key={`${client.id}-${index}`}
-              className="flex-shrink-0 w-40 h-20 flex justify-center items-center"
+              className="flex-shrink-0 w-32 sm:w-40 h-16 sm:h-20 flex justify-center items-center"
             >
               <img
                 src={client.logo}
                 alt={client.name}
-                className="h-20 grayscale hover:grayscale-0 transition duration-300"
+                className="h-12 sm:h-20 max-w-full object-contain grayscale hover:grayscale-0 transition duration-300"
               />
             </div>
           ))}
