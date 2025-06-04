@@ -36,7 +36,7 @@ const Navbar: React.FC = () => {
   return (
     <nav
       className={`fixed w-full top-0 left-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-white shadow-md backdrop-blur-sm" : "bg-transparent"
+        isScrolled ? "bg-white shadow-md backdrop-blur-xl" : "bg-transparent"
       }`}
     >
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 md:px-8 py-4 flex items-center justify-between">
@@ -52,7 +52,7 @@ const Navbar: React.FC = () => {
           className={`hidden lg:flex space-x-8 font-medium transition-colors duration-300 ${
             isScrolled
               ? "text-gray-800"
-              : "text-white/85 font-semibold text-base"
+              : "text-red-400 font-bold text-md"
           }`}
         >
           {navLinks.map(({ name, path }) => (
