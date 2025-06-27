@@ -23,7 +23,7 @@ const WhyChooseUs: React.FC = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <div className="absolute -bottom-2 -left-2 sm:-bottom-4 sm:-left-4 md:-bottom-8 md:-left-8 w-full h-full bg-blue-100 rounded-lg shadow-lg z-0"></div>
-          <img src={bgImage} alt="Kenapa Memilih Kami" className="w-full h-auto rounded-lg shadow-lg relative z-10" />
+          <img src={bgImage} alt="Kenapa Memilih Kami" loading="lazy" className="w-full h-auto rounded-lg shadow-lg relative z-10" />
         </motion.div>
 
         {/* Konten teks */}

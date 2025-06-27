@@ -45,28 +45,32 @@ const FAQSection: React.FC = () => {
   };
 
   return (
-    <section className="py-16 px-8">
-      <motion.div 
+    <section className="py-12 px-4 sm:px-6 md:px-8">
+      <motion.div
         ref={ref}
-        className="container mx-auto max-w-full"
+        className="container mx-auto max-w-4xl"
         initial={{ opacity: 0, y: 50 }}
         animate={isInView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.5 }}
       >
-        <h2 className="text-3xl font-bold text-gray-800">Pertanyaan Yang Sering Diajukan</h2>
-        <p className="text-gray-600 mt-2">Temukan jawaban atas pertanyaan seputar layanan kami.</p>
+        <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800 text-left">
+          Pertanyaan Yang Sering Diajukan
+        </h2>
+        <p className="text-sm sm:text-base text-gray-600 text-left">
+          Temukan jawaban atas pertanyaan seputar layanan kami.
+        </p>
 
-        <div className="mt-8 space-y-4">
+        <div className="mt-6 sm:mt-8 space-y-4">
           {faqData.map((faq, index) => (
-            <motion.div 
-              key={index} 
+            <motion.div
+              key={index}
               className="border rounded-lg shadow-md overflow-hidden"
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.4, delay: index * 0.1 }}
             >
               <button
-                className="w-full text-left p-4 bg-blue-800 text-white font-semibold flex justify-between items-center"
+                className="w-full text-left p-3 sm:p-4 bg-blue-800 text-white font-semibold flex justify-between items-center text-sm sm:text-base"
                 onClick={() => toggleFAQ(index)}
               >
                 {faq.question}
@@ -83,7 +87,9 @@ const FAQSection: React.FC = () => {
                 transition={{ duration: 0.3 }}
                 className="overflow-hidden"
               >
-                <div className="p-4 text-gray-700">{faq.answer}</div>
+                <div className="p-3 sm:p-4 text-gray-700 text-sm sm:text-base leading-relaxed">
+                  {faq.answer}
+                </div>
               </motion.div>
             </motion.div>
           ))}

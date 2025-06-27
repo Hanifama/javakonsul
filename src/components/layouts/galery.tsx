@@ -22,19 +22,21 @@ const GallerySection: React.FC = () => {
         </div>
 
         <div
-          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6"
           style={{
-            gridAutoRows: "100px",
             gridAutoFlow: "dense",
           }}
         >
           {galleryItems.map(({ src, alt, rowSpan, colSpan }, index) => (
             <div
               key={index}
-              className="relative overflow-hidden rounded-2xl shadow-lg cursor-pointer hover:shadow-2xl transition-shadow duration-300"
+              className={`relative overflow-hidden rounded-2xl shadow-lg cursor-pointer hover:shadow-2xl transition-shadow duration-300 
+        aspect-[4/3] md:aspect-auto`}
               style={{
-                gridRowEnd: `span ${rowSpan}`,
-                gridColumnEnd: `span ${colSpan}`,
+                ...(window.innerWidth >= 768 && {
+                  gridRowEnd: `span ${rowSpan}`,
+                  gridColumnEnd: `span ${colSpan}`,
+                }),
               }}
             >
               <img

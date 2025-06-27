@@ -10,6 +10,16 @@ import logo from '../../assets/logojava.png';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
+
+  const handleDownload = (path: string, filename: string) => {
+    const link = document.createElement("a");
+    link.href = path;
+    link.download = filename;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <footer className="bg-[#f5f5f5] text-gray-800 py-16 px-6">
       <div className="grid grid-cols-1 md:grid-cols-[0.5fr_1fr_1fr_1.5fr] gap-12">
@@ -146,13 +156,18 @@ const Footer = () => {
           </p>
           <div className="flex flex-wrap gap-4">
             <button
-              onClick={() => window.open('https://drive.google.com/your-brosur-link', '_blank')}
+              onClick={() =>
+                handleDownload("/data/company.pdf", "brosur-java-konsul.pdf")
+              }
               className="inline-flex items-center gap-2 px-6 py-3 border border-blue-600 text-blue-600 rounded-full hover:bg-blue-600 hover:text-white transition-all duration-300 font-semibold"
             >
               <Download size={18} /> Brosur
             </button>
+
             <button
-              onClick={() => window.open('https://drive.google.com/your-compro-link', '_blank')}
+              onClick={() =>
+                handleDownload("/data/company.pdf", "company-profile-java-konsul.pdf")
+              }
               className="inline-flex items-center gap-2 px-6 py-3 border border-blue-600 text-blue-600 rounded-full hover:bg-blue-600 hover:text-white transition-all duration-300 font-semibold"
             >
               <Download size={18} /> Company Profile

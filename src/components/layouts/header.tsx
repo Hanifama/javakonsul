@@ -50,10 +50,10 @@ const Header: React.FC = () => {
             className="relative min-h-screen flex items-center justify-start bg-fixed bg-center bg-cover"
             style={{ backgroundImage: `url(${headerImg1})` }}
         >
-            <div className="absolute inset-0 bg-black/50 backdrop-blur-[2px]"></div>
+            <div className="absolute inset-0 bg-neutral-800/50 backdrop-blur-[2px]"></div>
 
-            <div className="relative z-10 max-w-3xl px-6 text-left flex flex-col justify-end min-h-full">
-                <h1 className="text-4xl md:text-6xl font-extrabold text-white leading-tight tracking-wide flex flex-wrap">
+            <div className="relative z-10 max-w-3xl w-full px-4 md:px-6 text-left flex flex-col justify-end min-h-full pb-10 md:pb-24">
+                <h1 className="text-2xl sm:text-3xl md:text-6xl font-extrabold text-white leading-tight tracking-wide flex flex-wrap">
                     {typingText.split("").map((char, i) => (
                         <motion.span
                             key={i}
@@ -67,7 +67,7 @@ const Header: React.FC = () => {
                     ))}
                 </h1>
 
-                <div className="h-20 overflow-hidden mb-2 relative">
+                <div className="h-16 sm:h-20 overflow-hidden mb-2 relative">
                     <AnimatePresence mode="wait">
                         <motion.h1
                             key={rotatingTexts[index]}
@@ -75,7 +75,7 @@ const Header: React.FC = () => {
                             animate="center"
                             exit="exit"
                             transition={{ duration: 0.6 }}
-                            className="absolute text-4xl md:text-6xl font-extrabold text-white leading-tight tracking-wide"
+                            className="absolute text-2xl sm:text-3xl md:text-6xl font-extrabold text-white leading-tight tracking-wide"
                             variants={
                                 rotatingTexts[index] === "Tanpa Ragu!"
                                     ? {
@@ -101,27 +101,12 @@ const Header: React.FC = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 1.5, duration: 0.6 }}
-                    className="text-white text-lg md:text-xl max-w-3xl leading-relaxed mb-8 text-justify"
+                    className="text-white text-sm sm:text-base md:text-xl leading-relaxed mb-6 sm:mb-8 text-justify max-w-full"
                 >
                     Mitra Terpercaya Anda untuk Solusi Konstruksi yang Efisien dan Tepat Waktu.
                     Dari perencanaan hingga pelaksanaan, kami pastikan setiap proyek berjalan lancar,
                     praktis, dan sesuai anggaran — tanpa ribet dan penuh kepastian.
                 </motion.p>
-
-                {/* <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 1.8, duration: 0.6 }}
-                    className="flex justify-start"
-                >
-                    <Link
-                        to="#"
-                        className="px-10 py-4 font-semibold rounded-md bg-white text-blue-700 hover:bg-blue-50 shadow-lg transition-transform transform hover:scale-105"
-                        aria-label="Download Profile"
-                    >
-                        Download Profile
-                    </Link>
-                </motion.div> */}
             </div>
         </header>
     );

@@ -15,9 +15,9 @@ const services = [
 untuk menghasilkan data yang akurat dan terpercaya. Pengukuran dilakukan secara detail untuk membantu Anda dalam perencanaan proyek konstruksi atau infrastruktur 
 dengan efisiensi dan risiko minimal. Data yang kami sediakan menjadi fondasi kuat untuk langkah pembangunan Anda selanjutnya.`,
         priceList: [
-            { name: "Paket Basic - Pengukuran Standar", price: "Rp5.000.000" },
-            { name: "Paket Premium - Pengukuran Lengkap + Analisa", price: "Rp12.000.000" },
-            { name: "Layanan Tambahan - Investigasi Khusus", price: "Rp7.500.000" },
+            { name: "Paket Basic - Pengukuran Standar", price: "Rp-" },
+            { name: "Paket Premium - Pengukuran Lengkap + Analisa", price: "Rp-" },
+            { name: "Layanan Tambahan - Investigasi Khusus", price: "Rp-" },
         ],
     },
     {
@@ -28,9 +28,9 @@ dengan efisiensi dan risiko minimal. Data yang kami sediakan menjadi fondasi kua
         details: `Kami menyediakan layanan perencanaan sistem yang komprehensif, mulai dari analisis kebutuhan hingga desain arsitektur sistem yang terstruktur.
 Pendekatan kami mengutamakan efisiensi dan skalabilitas, memastikan solusi yang tepat guna dan dapat berkembang sesuai kebutuhan bisnis dan proyek Anda.`,
         priceList: [
-            { name: "Analisa Kebutuhan Sistem", price: "Rp8.000.000" },
-            { name: "Desain Arsitektur Sistem", price: "Rp15.000.000" },
-            { name: "Konsultasi dan Revisi", price: "Rp3.000.000 / sesi" },
+            { name: "Analisa Kebutuhan Sistem", price: "Rp-" },
+            { name: "Desain Arsitektur Sistem", price: "Rp-" },
+            { name: "Konsultasi dan Revisi", price: "Rp-" },
         ],
     },
     {
@@ -41,9 +41,9 @@ Pendekatan kami mengutamakan efisiensi dan skalabilitas, memastikan solusi yang 
         details: `Tim perancang teknik kami berkomitmen memberikan solusi desain yang presisi dan sesuai standar nasional maupun internasional (SNI dan lainnya).
 Setiap rancangan dibuat dengan memperhatikan aspek keamanan, fungsionalitas, dan estetika guna memastikan proyek Anda dapat beroperasi optimal dalam jangka panjang.`,
         priceList: [
-            { name: "Desain Struktur Dasar", price: "Rp10.000.000" },
-            { name: "Desain Struktur Lengkap", price: "Rp20.000.000" },
-            { name: "Konsultasi Teknik", price: "Rp4.000.000 / sesi" },
+            { name: "Desain Struktur Dasar", price: "Rp-" },
+            { name: "Desain Struktur Lengkap", price: "Rp-" },
+            { name: "Konsultasi Teknik", price: "Rp-" },
         ],
     },
     {
@@ -54,8 +54,8 @@ Setiap rancangan dibuat dengan memperhatikan aspek keamanan, fungsionalitas, dan
         details: `Layanan pemrosesan data berbasis komputer kami memanfaatkan teknologi terkini untuk mengelola dan mengolah data secara efisien.
 Dengan output yang cepat dan akurat, Anda dapat mengambil keputusan strategis dengan percaya diri dan tepat waktu.`,
         priceList: [
-            { name: "Pengolahan Data Dasar", price: "Rp6.000.000" },
-            { name: "Analisis Data Lanjut", price: "Rp14.000.000" },
+            { name: "Pengolahan Data Dasar", price: "Rp-" },
+            { name: "Analisis Data Lanjut", price: "Rp-" },
             { name: "Pelaporan Kustom", price: "Rp5.000.000" },
         ],
     },
@@ -67,9 +67,9 @@ Dengan output yang cepat dan akurat, Anda dapat mengambil keputusan strategis de
         details: `Kami mengelola seluruh aspek konstruksi dari perencanaan, pelaksanaan hingga pengawasan lapangan secara profesional.
 Dengan pendekatan terstruktur dan transparan, proyek Anda akan berjalan sesuai jadwal, anggaran, dan standar kualitas yang ditetapkan.`,
         priceList: [
-            { name: "Manajemen Proyek Standar", price: "Rp25.000.000" },
-            { name: "Supervisi Harian", price: "Rp1.500.000 / hari" },
-            { name: "Laporan Progres Bulanan", price: "Rp7.000.000" },
+            { name: "Manajemen Proyek Standar", price: "Rp-" },
+            { name: "Supervisi Harian", price: "Rp-" },
+            { name: "Laporan Progres Bulanan", price: "Rp-" },
         ],
     },
     {
@@ -80,9 +80,9 @@ Dengan pendekatan terstruktur dan transparan, proyek Anda akan berjalan sesuai j
         details: `Layanan analisa tanah kami menggunakan metode laboratorium standar untuk menguji komposisi, kekuatan, dan sifat mekanik tanah.
 Hasil analisa yang detail membantu Anda dalam menentukan jenis pondasi terbaik dan menghindari risiko kegagalan struktur di kemudian hari.`,
         priceList: [
-            { name: "Analisa Dasar", price: "Rp4.000.000" },
-            { name: "Analisa Lengkap dengan Laporan", price: "Rp9.000.000" },
-            { name: "Uji Kekuatan dan Komposisi", price: "Rp6.000.000" },
+            { name: "Analisa Dasar", price: "Rp-" },
+            { name: "Analisa Lengkap dengan Laporan", price: "Rp-" },
+            { name: "Uji Kekuatan dan Komposisi", price: "Rp-" },
         ],
     },
 ];
@@ -115,7 +115,7 @@ const ServiceDetailPage = () => {
 
             <section className="max-w-4xl mx-auto px-6 py-16">
 
-                <div className="flex items-center justify-between mb-8">
+                <div className="flex items-center justify-between mb-20">
                     {/* Logo */}
                     <div>
                         <img src={logoJava} alt="Logo Java" className="w-60 h-auto" />

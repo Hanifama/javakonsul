@@ -31,7 +31,7 @@ const PortfolioSection: React.FC = () => {
         </div>
 
         {/* Search and Filter Section */}
-        <div className="mt-8 flex justify-end">
+        <div className="mt-8 flex flex-col sm:flex-row sm:justify-end gap-2">
           <div className="flex items-end space-x-2">
             {/* Search Input */}
             <input
@@ -55,15 +55,15 @@ const PortfolioSection: React.FC = () => {
         <div
           className={`overflow-hidden bg-white rounded-lg shadow-xl border border-gray-200 transition-all duration-500 ease-in-out ${isDropdownOpen
             ? "max-h-[300px] opacity-100 translate-y-0 scale-100"
-            : "max-h-0 opacity-0 translate-y-2 scale-95" // Menurunkan posisi sedikit sebelum menutup
+            : "max-h-0 opacity-0 translate-y-2 scale-95"
             }`}
           style={{ transitionProperty: "max-height, opacity, transform" }}
         >
-          <div className="flex justify-between gap-4 p-4">
+          <div className="flex flex-wrap justify-center gap-2 p-4">
             {["all", "sipil", "teknik", "manajemen"].map(category => (
               <button
                 key={category}
-                className={`w-[35%] py-1.5 text-sm font-semibold rounded-full transition-all duration-300 ease-in-out ${filter === category
+                className={`px-4 py-1.5 text-sm font-semibold rounded-full transition-all duration-300 ease-in-out ${filter === category
                   ? "bg-blue-600 text-white"
                   : "text-red-600 border border-red-600 hover:bg-red-600 hover:text-white"
                   }`}
@@ -82,7 +82,7 @@ const PortfolioSection: React.FC = () => {
 
         <div>
           {/* Portfolio Grid */}
-          <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
+          <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 pb-6">
             {filteredPortfolio.slice(0, visibleItems).map((item, index) => (
               <Link
                 to={`/portfolio/${item.id}`}
@@ -92,7 +92,7 @@ const PortfolioSection: React.FC = () => {
                 <img
                   src={item.image}
                   alt={item.title}
-                  className="w-full h-48 object-cover rounded-lg mb-6"
+                  className="w-full h-40 sm:h-48 object-cover rounded-lg mb-4"
                 />
                 <div className="flex items-center justify-start space-x-3 mb-4">
                   {item.category === "sipil" && (
@@ -115,8 +115,8 @@ const PortfolioSection: React.FC = () => {
                   </span>
                 </div>
 
-                <h3 className={`text-2xl font-semibold mb-2 ${item.textColor}`}>{item.title}</h3>
-                <p className="text-gray-600 text-sm">{item.description}</p>
+                <h3 className={`text-lg sm:text-xl font-semibold mb-2 ${item.textColor}`}>{item.title}</h3>
+                <p className="text-gray-600 text-sm sm:text-base">{item.description}</p>
               </Link>
             ))}
           </div>

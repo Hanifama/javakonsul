@@ -23,7 +23,7 @@ const ContactSection: React.FC = () => {
             <div className="overflow-hidden rounded-2xl shadow-xl border border-gray-200">
               <iframe
                 className="w-full h-72 md:h-80"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.4040679569747!2d107.631883!3d-6.932936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e9b29b2c2fdf%3A0x1234567890abcdef!2sJl.%20Hasan%20Saputra%20IV%20No.%2020%2C%20Turangga%2C%20Lengkong%2C%20Bandung%2C%20Jawa%20Barat!5e0!3m2!1sid!2sid!4v1696357588185!5m2!1sid!2sid"
+                src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3083.9164387458745!2d107.63166407024478!3d-6.936521847830077!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sPT%20java%20konsul%20utama!5e1!3m2!1sid!2sid!4v1750993868317!5m2!1sid!2sid"
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"

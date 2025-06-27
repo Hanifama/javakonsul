@@ -35,7 +35,7 @@ const Navbar: React.FC = () => {
 
   return (
     <nav
-      className={`fixed w-full top-0 left-0 z-50 transition-all duration-300 ${
+      className={`fixed w-full top-0 left-0 z-50 transition-all duration-300 overflow-x-hidden ${
         isScrolled ? "bg-white shadow-md backdrop-blur-xl" : "bg-transparent"
       }`}
     >
@@ -49,10 +49,10 @@ const Navbar: React.FC = () => {
 
         {/* Desktop Nav */}
         <ul
-          className={`hidden lg:flex space-x-8 font-medium transition-colors duration-300 ${
+          className={`hidden lg:flex lg:space-x-8 space-x-4 font-medium transition-colors duration-300 ${
             isScrolled
               ? "text-gray-800"
-              : "text-red-400 font-bold text-md"
+              : "text-yellow-500 font-bold text-md"
           }`}
         >
           {navLinks.map(({ name, path }) => (
@@ -62,16 +62,16 @@ const Navbar: React.FC = () => {
                 className={`relative px-2 py-1 transition-colors duration-300 ${
                   isActive(path)
                     ? isScrolled
-                      ? "text-red-600 font-semibold"
-                      : "text-red-400 font-semibold"
+                      ? "text-yellow-500 font-semibold"
+                      : "text-yellow-500 font-semibold"
                     : isScrolled
-                    ? "hover:text-blue-600"
-                    : "hover:text-blue-300"
+                    ? "hover:text-blue-800"
+                    : "hover:text-red-600"
                 }`}
               >
                 {name}
                 <span
-                  className={`absolute left-0 bottom-0 w-full h-0.5 bg-red-600 transition-all duration-300 ${
+                  className={`absolute left-0 bottom-0 w-full h-0.5 bg-yellow-500 transition-all duration-300 ${
                     isActive(path)
                       ? "opacity-100 scale-x-100"
                       : "opacity-0 scale-x-0"
@@ -87,7 +87,7 @@ const Navbar: React.FC = () => {
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className={`focus:outline-none ${
-              isScrolled ? "text-red-600" : "text-white/85"
+              isScrolled ? "text-yellow-500" : "text-yellow-500/85"
             }`}
           >
             {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
@@ -103,7 +103,7 @@ const Navbar: React.FC = () => {
               key={path}
               to={path}
               className={`block text-base font-medium ${
-                isActive(path) ? "text-red-600 font-semibold" : "text-gray-800"
+                isActive(path) ? "text-yellow-500 font-semibold" : "text-gray-800"
               }`}
               onClick={() => setIsMobileMenuOpen(false)}
             >
