@@ -9,6 +9,11 @@ import DetailPortfolioPage from "../pages/DetailPortfolio";
 import ServiceDetailPage from "../pages/ServicesDetailPage";
 import LoginPage from "../pages/LoginPage";
 import DashboardPage from "../pages/DashboardPage";
+import PortfolioManagement from "../pages/ManagementPortfolio";
+import GaleryManagement from "../pages/ManagementGalery";
+import UserManagement from "../pages/ManagementUsers";
+import SettingsPage from "../pages/SettingsPage";
+import ServiceManagement from "../pages/ManagementService";
 
 export interface AppRoute {
   path: string;
@@ -28,6 +33,12 @@ const routes: AppRoute[] = [
   { path: "/login", element: <LoginPage /> },
 
   { path: "/dashboard", element: <DashboardPage /> },
+
+  { path: "/dashboard/layanan", element: <ServiceManagement /> },
+  { path: "/dashboard/portfolio", element: <PortfolioManagement /> },
+  { path: "/dashboard/galeri", element: <GaleryManagement /> },
+  { path: "/dashboard/users", element: <UserManagement /> },
+  { path: "/dashboard/settings", element: <SettingsPage /> },
 ];
 
 export default routes;
